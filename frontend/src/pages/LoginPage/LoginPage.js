@@ -16,10 +16,11 @@ const LoginPage = () => {
     if (isServerError) {
       reset();
     }
-  }, [isServerError]);
+  },);
+  
 
   return (
-    <div className="container">
+    <div className="brand">
       <form className="form" onSubmit={handleSubmit}>
         <label>
           Username:{" "}
@@ -30,7 +31,7 @@ const LoginPage = () => {
             onChange={handleInputChange}
           />
         </label>
-        <label>
+        <label >
           Password:{" "}
           <input
             type="text"
