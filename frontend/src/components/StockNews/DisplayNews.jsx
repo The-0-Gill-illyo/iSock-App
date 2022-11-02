@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 
-export default function DisplayStockNews(){
-    const [grabArticles, setGrabArticles] = useState([]);
+export default function DisplayStockNews(props){
 
     function handleClick(news){
 
@@ -11,15 +10,21 @@ export default function DisplayStockNews(){
     };
 
 
-    const article = grabArticles.map(title => (
-        <nav>
-        <div>
-        <h5>{title.description}</h5>
-        <h5>{title.link}</h5>
-        </div>
-        </nav>
-        ));
+    return(
+        <h3>
+            {props.stockNews.description}
+            <br/>
+            <br/>
+            {props.stockNews.pubDate}
+            <br/>
+            <br/>
+            {props.stockNews.title}
+            <br/>
+            <br/>
+            <a href="props.stockNews.link">{props.stockNews.link}</a>
+        </h3>
+    )
+    
 
-        
-        return <div>{article.setGrabArticles}</div>
+       
 }

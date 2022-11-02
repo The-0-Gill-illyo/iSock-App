@@ -22,9 +22,9 @@ const CompanyProfile = () => {
       console.log(companyProfile)
 
       try{
-        let response = await axios.get(`https://yahoo-finance15.p.rapidapi.com/api/yahoo/qu/quote/${searchInput}/asset-profile`, { headers: {
+        let response = await axios.get(`https://mboum-finance.p.rapidapi.com/qu/quote/asset-profile`, {params: {symbol: `${searchInput}`}, headers: {
           'X-RapidAPI-Key': '86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50',
-          'X-RapidAPI-Host': 'yahoo-finance15.p.rapidapi.com'}})
+          'X-RapidAPI-Host': 'mboum-finance.p.rapidapi.com'}})
           console.log(response.data)
 
           setCompanyProfile(response.data.assetProfile);

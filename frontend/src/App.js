@@ -51,7 +51,6 @@ function App() {
         <Route path="/companyProfile" element={<CompanyProfile/>} /> 
       </Routes>
       </div>
-      
       <Footer />
     </div>
     
