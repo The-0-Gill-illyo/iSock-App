@@ -7,7 +7,7 @@ table {
 
 th,
 td {
-  /* border: 1px solid #ffffff; */
+  border: 1px solid #ffffff; 
   text-align: left;
   padding: 8px;
   font-size: 32px;
@@ -26,20 +26,20 @@ td {
 
 }
 
-/* form td:last-child {
+form td:last-child {
   display: flex;
   justify-content: space-evenly;
 }
 
 form * {
   font-size: 28px;
-} */
+}
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-} */
+}
 
 html {
   box-sizing: border-box;
@@ -86,4 +86,4 @@ p {
   margin: 5px;
   padding: 3px 7px;
   font-size: 35px;
-}
+} 

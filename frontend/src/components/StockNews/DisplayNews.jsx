@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 
 export default function DisplayStockNews(props){
@@ -11,18 +10,20 @@ export default function DisplayStockNews(props){
 
 
     return(
-        <h3>
-            {props.stockNews.description}
-            <br/>
-            <br/>
-            {props.stockNews.pubDate}
-            <br/>
-            <br/>
-            {props.stockNews.title}
-            <br/>
-            <br/>
-            <a href="props.stockNews.link">{props.stockNews.link}</a>
-        </h3>
+        <div onChange={handleClick}>
+            <h3>
+               <p> {props.stockNews.description} </p>
+                <br/>
+                <br/>
+                {props.stockNews.pubDate}
+                <br/>
+                <br/>
+                {props.stockNews.title}
+                <br/>
+                <br/>
+                <a href="props.stockNews.link">{props.stockNews.link}</a>
+            </h3>
+        </div>
     )
     
 

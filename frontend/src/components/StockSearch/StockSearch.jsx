@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DisplayStockDetails from "./DisplayStockDetails";
-import StockChartData, {Chart} from "../StockChartData/StockChartData"
 
 
-const StockSearch = (props) => {
+const StockSearch = () => {
     const [searchStocks, setSearchStocks] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
@@ -22,9 +21,9 @@ const StockSearch = (props) => {
       console.log(searchInput)
 
       try{
-        let response = await axios.get(`https://yahoo-finance15.p.rapidapi.com/api/yahoo/qu/quote/${searchInput}`, { headers: {
+        let response = await axios.get(`https://mboum-finance.p.rapidapi.com/qu/quote`, { params: {symbol: `${searchInput}`}, headers: {
           'X-RapidAPI-Key': '86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50',
-          'X-RapidAPI-Host': 'yahoo-finance15.p.rapidapi.com'}})
+          'X-RapidAPI-Host': 'mboum-finance.p.rapidapi.com'}})
           console.log(response.data)
 
           setSearchStocks(response.data[0]);

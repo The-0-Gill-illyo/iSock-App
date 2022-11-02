@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import AddStockEntry from './AddStockEntry';
-
 import DisplayWatchlistDetails from './DisplayWatchlistEntries';
 
-function Watchlist() {
+function Watchlist(props) {
     const [entries, setEntries] = useState([])
 
     function addNewEntry(entry){
@@ -16,8 +15,10 @@ function Watchlist() {
 
         return(
             <div>
+                <div>
+                <h1>{props.tempEntries}</h1>
+                </div>
                 <DisplayWatchlistDetails parentEntries={entries}/>
-                <h1>{Watchlist.entry}</h1>
                 <AddStockEntry addStockEntryProperty={addNewEntry}/>
             </div>
         )

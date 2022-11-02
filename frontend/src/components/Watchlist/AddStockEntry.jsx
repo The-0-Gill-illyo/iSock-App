@@ -18,6 +18,7 @@ const AddStockEntry = (props) => {
 
     return(
         <div>       
+            
             <form onSubmit={handleSubmit} className='form-grid'>
                <label>Stock Name</label>
                 <input type='letter' className='form-grid' value={stockName} onChange={(stockName)=> setStockName(stockName.target.value)}/>
