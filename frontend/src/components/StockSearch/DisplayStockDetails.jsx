@@ -1,4 +1,3 @@
-import Watchlist from "../Watchlist/Watchlist"
 
 export default function DisplayStockSearch(props){
 

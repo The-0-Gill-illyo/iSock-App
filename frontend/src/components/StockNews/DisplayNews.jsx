@@ -12,16 +12,16 @@ export default function DisplayStockNews(props){
     return(
         <div onChange={handleClick}>
             <h3>
-               <p> {props.stockNews.description} </p>
+               <p> <h1>{props.stockNews.description}</h1> </p>
                 <br/>
                 <br/>
-                {props.stockNews.pubDate}
+                <h2>{props.stockNews.pubDate}</h2>
                 <br/>
                 <br/>
-                {props.stockNews.title}
+                <h2>{props.stockNews.title}</h2>
                 <br/>
                 <br/>
-                <a href="props.stockNews.link">{props.stockNews.link}</a>
+                <h3><a href="props.stockNews.link">{props.stockNews.link}</a></h3>
             </h3>
         </div>
     )

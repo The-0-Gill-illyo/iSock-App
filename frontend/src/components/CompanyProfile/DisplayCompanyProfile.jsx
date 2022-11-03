@@ -10,7 +10,7 @@ export default function DisplayCompanyProfile(props){
     }
     
     return(
-         <h3>
+         <h3 onClick={handleClick}>
             {props.companyProfile.address1}
             <br></br>
             <br></br>

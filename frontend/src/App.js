@@ -1,7 +1,6 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import background from "./img/adeolu-eletu-E7RLgUjjazc-unsplash.jpg";
 
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
@@ -27,12 +26,12 @@ function App() {
 
 
   return (
-    <div className="body">
-      <Navbar />
   
-        <div style={{backgroundImage: `url(${background})` }}>
-          <img src="frontend/src/img/adeolu-eletu-E7RLgUjjazc-unsplash.jpg" alt=""/>
-
+    <div className="body">
+      <div>
+        <Navbar />
+      {/* <div style={{backgroundImage: `url(${background})` }}>
+       <img src="img/adeolu-eletu-E7RLgUjjazc-unsplash.jpg" alt=""/> */}
       <Routes>
         <Route
           path="/"
@@ -45,10 +44,14 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/home" element={<HomePage />}/>
-        <Route path="/watchlist" element={<Watchlist />} />
-        <Route path="/stocknews/" element={<StockNews />} />
+        <Route path="/watchlist" element={<PrivateRoute><Watchlist /></PrivateRoute>} />
+        <Route path="/stocknews" element={<PrivateRoute><StockNews /></PrivateRoute>} />
+        <Route path="/stocksearch" element={<PrivateRoute><StockSearch /></PrivateRoute>} />
+        <Route path="/companyProfile" element={<PrivateRoute><CompanyProfile /></PrivateRoute>} />
+        <Route path="/StockNews/props.stockNews.link" element={<StockNews />} />
+        {/* <Route path="/stocknews" element={<StockNews />} />
         <Route path="/stocksearch" element={<StockSearch />} />
-        <Route path="/companyProfile" element={<CompanyProfile/>} /> 
+        <Route path="/companyProfile" element={<CompanyProfile/>} />  */}
       </Routes>
       </div>
       <Footer />

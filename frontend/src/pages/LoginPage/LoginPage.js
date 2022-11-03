@@ -21,6 +21,14 @@ const LoginPage = () => {
 
   return (
     <div className="brand">
+      <div>
+        <p>
+          <h1>
+          Investing isn't just about money—it's about your future Let us help you create the future you want 
+          for yourself and your loved ones. Whether you're new to investing or an experienced trader, we're here to help you on your way.
+          </h1>
+        </p>
+      </div>
       <form className="form" onSubmit={handleSubmit}>
         <label>
           Username:{" "}
