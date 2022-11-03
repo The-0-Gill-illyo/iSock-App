@@ -26,13 +26,13 @@ td {
 
 }
 
-/* form td:last-child {
+form td:last-child {
   display: flex;
   justify-content: space-evenly;
 }
 form * {
   font-size: 28px;
-} */
+}
 *::before,
 *::after {
   margin: 0;
@@ -63,9 +63,9 @@ p {
 
 
 
-.container {
-  margin: 0 auto;
-  max-width: 600px;
+.watchlist-container {
+  margin: 0 ;
+  width: auto;
   overflow: auto;
   text-align: center;
 }
@@ -88,5 +88,5 @@ p {
 }
 body{
   background-image: url("./img/piggybank-4vDGyafa9qU-unsplash.jpg");
-
+  text-align: center;
 }

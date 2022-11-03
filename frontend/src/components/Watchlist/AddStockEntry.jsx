@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 
+
 const AddStockEntry = (props) => {
 
     const [stockName, setStockName] = useState("");
     const [targetPrice, setTargetPrice] = useState(0);
+
 
     function handleSubmit(event){
         event.preventDefault();
@@ -24,7 +26,7 @@ const AddStockEntry = (props) => {
                 <input type='letter' className='form-grid' value={stockName} onChange={(stockName)=> setStockName(stockName.target.value)}/>
                 <label>Target Price</label>
                 <input type='number' className='form-grid' value={targetPrice}  onChange={(targetPrice)=> setTargetPrice(parseFloat(targetPrice.target.value))}/>
-                <button type="submit" className='btn btn-primary' style={{'marginTop': '1em'}}>Set Stock Entry</button>
+                <button type="submit" className='btn btn-primary' style={{'marginTop': '1em'}}>Add Stock Entry</button>
             </form>
         </div>    
         
