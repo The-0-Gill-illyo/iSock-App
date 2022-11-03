@@ -44,14 +44,11 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/home" element={<HomePage />}/>
-        <Route path="/watchlist" element={<PrivateRoute><Watchlist /></PrivateRoute>} />
-        <Route path="/stocknews" element={<PrivateRoute><StockNews /></PrivateRoute>} />
-        <Route path="/stocksearch" element={<PrivateRoute><StockSearch /></PrivateRoute>} />
-        <Route path="/companyProfile" element={<PrivateRoute><CompanyProfile /></PrivateRoute>} />
+        <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/StockNews/props.stockNews.link" element={<StockNews />} />
-        {/* <Route path="/stocknews" element={<StockNews />} />
+        <Route path="/stocknews" element={<StockNews />} />
         <Route path="/stocksearch" element={<StockSearch />} />
-        <Route path="/companyProfile" element={<CompanyProfile/>} />  */}
+        <Route path="/companyProfile" element={<CompanyProfile/>} /> 
       </Routes>
       </div>
       <Footer />

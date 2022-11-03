@@ -19,9 +19,9 @@ const Watchlist = () => {
     const fetchSearchResults = async () => {
         let response = await axios.get("http://127.0.0.1:8000/api/watchlist/", {
             headera: {
-                Authoriztaion: "Bearer " + token,
+                Authorization: "Bearer " + token,
             },
-        });
+        });console.log(storedToWatchlist)
         setStoredToWatchlist(response.data)
     }
     fetchSearchResults()

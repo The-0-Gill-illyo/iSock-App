@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "bd364953-4ef3-4db0-b424-a900a8df9ccc",
+		"name": "DRF_JWT_Backend Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22976415"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Cmuska\",\r\n    \"password\": \"password@01\",\r\n    \"email\": \"Cmuska@skateordie.com\",\r\n    \"first_name\": \"Chad\",\r\n    \"last_name\": \"Muska\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login_User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Cmuska\",\r\n    \"password\": \"password@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh_Access",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2NjQxMzE1LCJpYXQiOjE2NjU3NzczMTUsImp0aSI6IjVmZGI1MDQxOTM1OTQ1MDM5Nzc5YzQ0OWZjY2M5OWZlIiwidXNlcl9pZCI6NSwidXNlcm5hbWUiOiJEb2NNc3RyRHJvcCIsImZpcnN0X25hbWUiOiJSb2RuZXkifQ.qO3xVx8npKmmy8tN8tbrBy7ESElewSOvGhB6rhx4Omk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2NjQxMzE1LCJpYXQiOjE2NjU3NzczMTUsImp0aSI6IjVmZGI1MDQxOTM1OTQ1MDM5Nzc5YzQ0OWZjY2M5OWZlIiwidXNlcl9pZCI6NSwidXNlcm5hbWUiOiJEb2NNc3RyRHJvcCIsImZpcnN0X25hbWUiOiJSb2RuZXkifQ.qO3xVx8npKmmy8tN8tbrBy7ESElewSOvGhB6rhx4Omk",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "yahoo-finance15.p.rapidapi.com",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2NzUwNTMxNSwiaWF0IjoxNjY1Nzc3MzE1LCJqdGkiOiJjODgzYjUzNzBkZjk0ZmNhOWY0YjRlNDkyMzNiMzI4NyIsInVzZXJfaWQiOjUsInVzZXJuYW1lIjoiRG9jTXN0ckRyb3AiLCJmaXJzdF9uYW1lIjoiUm9kbmV5In0.Lo0cRvLlyma7kjxWKnGO_NK6RapIAVleMkDcHyGJC2w\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "GET all cars (unprotected)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/all/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								"all",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET cars for user (protected)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MTU2ODM5LCJpYXQiOjE2NDcyOTI4MzksImp0aSI6ImJjYzJhZTUzOTRlYzQ3OThiNjI0YTcwYTYzYjcxOThmIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJqanZlZ2EiLCJmaXJzdF9uYW1lIjoiIn0.l9ATW5CpWF2TGniqVgU1I-a8LkuqgLQ4ok3tJh6asAA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST new car for user (protected)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY2NTM4Njc2LCJpYXQiOjE2NjU2NzQ2NzYsImp0aSI6IjczOTE1YTgxMzIzODRiMzFiODhiZjYzNGJlMDIyNjBhIiwidXNlcl9pZCI6NCwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.ZxbBrz69YvsFGljAe8wPnLAi9g-UMFHkGxwV3mJk2rE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MTU3MjczLCJpYXQiOjE2NDcyOTMyNzMsImp0aSI6IjIyMDQ4YTg2NzEzMTQyMmZhZjJmNDNmYmI2MTExZDg2IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.DeTe47E7-9eCr7xKE22m3CvFMDj0Sxye5A6ndwJ024M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"make\": \"Ford\",\n    \"model\": \"F150\",\n    \"year\": 1999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cars/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stocks",
+			"item": [
+				{
+					"name": "market/quotes/{stocks}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "yahoo-finance15.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://yahoo-finance15.p.rapidapi.com/api/yahoo/qu/quote/AAPL,MSFT",
+							"protocol": "https",
+							"host": [
+								"yahoo-finance15",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"yahoo",
+								"qu",
+								"quote",
+								"AAPL,MSFT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock/profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "yahoo-finance15.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://yahoo-finance15.p.rapidapi.com/api/yahoo/qu/quote/AAPL/asset-profile",
+							"protocol": "https",
+							"host": [
+								"yahoo-finance15",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"yahoo",
+								"qu",
+								"quote",
+								"AAPL",
+								"asset-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Market/News{stock}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "86d3b4a83bmsh0dd08eec6709231p1c4988jsn55fac02dce50",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "yahoo-finance15.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://yahoo-finance15.p.rapidapi.com/api/yahoo/ne/news/AAPL",
+							"protocol": "https",
+							"host": [
+								"yahoo-finance15",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"yahoo",
+								"ne",
+								"news",
+								"AAPL"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "watchlist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MzYwMTgxLCJpYXQiOjE2Njc0OTYxODEsImp0aSI6ImRmMzcyNWE1ZTFlYTQxZTk5NjU0NTlhMDY3ZWZlOTExIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJDbXVza2EiLCJmaXJzdF9uYW1lIjoiQ2hhZCJ9.g7d2Yh90ihDb51kjDY8ZV4VBvBhtypuP8Nj0WlezCv0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/watchlist/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"watchlist",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_to_watchlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MzYwMTgxLCJpYXQiOjE2Njc0OTYxODEsImp0aSI6ImRmMzcyNWE1ZTFlYTQxZTk5NjU0NTlhMDY3ZWZlOTExIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJDbXVza2EiLCJmaXJzdF9uYW1lIjoiQ2hhZCJ9.g7d2Yh90ihDb51kjDY8ZV4VBvBhtypuP8Nj0WlezCv0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"watchlist\": \"T\",\r\n    \"target_price\": 12.70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/watchlist/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"watchlist",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_from_watchlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MzYwMTgxLCJpYXQiOjE2Njc0OTYxODEsImp0aSI6ImRmMzcyNWE1ZTFlYTQxZTk5NjU0NTlhMDY3ZWZlOTExIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJDbXVza2EiLCJmaXJzdF9uYW1lIjoiQ2hhZCJ9.g7d2Yh90ihDb51kjDY8ZV4VBvBhtypuP8Nj0WlezCv0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/watchlist/delete_from_watchlist/12/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"watchlist",
+								"delete_from_watchlist",
+								"12",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
