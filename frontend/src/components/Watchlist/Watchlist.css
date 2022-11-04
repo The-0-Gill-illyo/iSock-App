@@ -64,9 +64,9 @@ p {
 
 
 
-.container {
-  margin: 0 auto;
-  max-width: 600px;
+.watchlist-container {
+  margin: 0 ;
+  width: auto;
   overflow: auto;
   text-align: center;
 }
@@ -87,3 +87,7 @@ p {
   padding: 3px 7px;
   font-size: 35px;
 } 
+
+.form-grid{
+  margin-top: px;
+}
