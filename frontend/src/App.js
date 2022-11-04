@@ -31,7 +31,7 @@ function App() {
       <div>
         <Navbar />
       <div style={{backgroundImage: `url(${background})` }}>
-       <img src="./img/piggybank-4vDGyafa9qU-unsplash.jpg" alt=""/> */}
+       <img src="./img/piggybank-4vDGyafa9qU-unsplash.jpg" /> 
       </div>
       <Routes>
         <Route

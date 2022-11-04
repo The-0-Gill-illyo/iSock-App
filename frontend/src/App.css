@@ -89,3 +89,9 @@ p {
 body{
   background-image: url("./img/piggybank-4vDGyafa9qU-unsplash.jpg");
 }
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: auto;
+  text-align: center;
+}

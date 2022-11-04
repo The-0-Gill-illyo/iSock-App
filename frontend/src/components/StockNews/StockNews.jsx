@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DisplayStockNews from './DisplayNews';
+import "./StockNews.css"
 
 const StockNews = () => {
     const [stockNews, setStockNews] = useState([]);
@@ -30,8 +31,8 @@ const StockNews = () => {
             }
           
         return ( 
-            <div>
-              <form onSubmit={handleSubmit}>             
+            <div className='display'>
+              <form className='display' onSubmit={handleSubmit}>             
                 <input type="text"  className="searchTerm" onChange={(event)=>setSearchInput(event.target.value)} placeholder="SEARCH"></input>
                 <button type='submit' className="searchButton">
                 <i className="fa-fa search">Get News</i>
