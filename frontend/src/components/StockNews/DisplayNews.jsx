@@ -11,6 +11,17 @@ export default function DisplayStockNews(props){
 
     return(
         <div onChange={handleClick}>
+             {props.stockNews.map((news, index) => {
+
+                return (
+                    <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{news.description}</td>
+                        <td>{news.title}</td>
+                     
+                    </tr>
+                );
+            })}
             <h1>
                {props.stockNews.description}
                 <br/>

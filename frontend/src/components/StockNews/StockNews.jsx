@@ -3,7 +3,7 @@ import axios from 'axios';
 import DisplayStockNews from './DisplayNews';
 
 const StockNews = () => {
-    const [stockNews, setStockNews] = useState("");
+    const [stockNews, setStockNews] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const StockNews = () => {
                   'X-RapidAPI-Host': 'mboum-finance.p.rapidapi.com'}})
                 console.log(response.data)
 
-                setStockNews(response.data.item[0]);
+                setStockNews(response.data.item);
         } catch(error){ 
           console.log(error.response.item)
       }           

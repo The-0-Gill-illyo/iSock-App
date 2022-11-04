@@ -24,14 +24,10 @@ const Watchlist = () => {
         });console.log(storedToWatchlist)
         setStoredToWatchlist(response.data)
     }
-    fetchSearchResults()
 
         function addNewEntry(entry){
   
-        let tempEntries = [entry, ...entries];
-        
-        setEntries(tempEntries);
-        console.log(tempEntries)
+            
         }
 
         return(
@@ -39,7 +35,7 @@ const Watchlist = () => {
             <div>
                 <div>
                 </div>
-                <DisplayWatchlistDetails parentEntries={entries}/>
+                <DisplayWatchlistDetails parentEntries={storedToWatchlist}/>
                 <AddStockEntry addStockEntryProperty={addNewEntry}/>
            </div>
         )
