@@ -18,6 +18,9 @@ export default function DisplayStockNews(props){
                         <td>{index + 1}</td>
                         <td>{news.description}</td>
                         <td>{news.title}</td>
+                        <td>{news.pubDate}</td>
+                        <td><a href="5175d4d2-94af-3c48-8330-28c4435a5d64">{news.guid}</a></td>
+                        <td><a href="props.stockNews.link">{news.link}</a></td>
                      
                     </tr>
                 );
@@ -32,7 +35,7 @@ export default function DisplayStockNews(props){
                 {props.stockNews.title}
                 <br/>
                 <br/>
-                <a href="props.stockNews.link">{props.stockNews.link}</a>
+                
             </h1>
         </div>
     )

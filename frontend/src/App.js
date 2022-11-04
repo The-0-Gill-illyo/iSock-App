@@ -1,7 +1,7 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-
+import background from "./img/piggybank-4vDGyafa9qU-unsplash.jpg"
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -30,8 +30,9 @@ function App() {
     <div className="body">
       <div>
         <Navbar />
-      {/* <div style={{backgroundImage: `url(${background})` }}>
-       <img src="img/adeolu-eletu-E7RLgUjjazc-unsplash.jpg" alt=""/> */}
+      <div style={{backgroundImage: `url(${background})` }}>
+       <img src="./img/piggybank-4vDGyafa9qU-unsplash.jpg" alt=""/> */}
+      </div>
       <Routes>
         <Route
           path="/"
