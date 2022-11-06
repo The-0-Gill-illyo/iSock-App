@@ -1,4 +1,4 @@
-
+import "./DisplayNews.css" 
 export default function DisplayStockNews(props){
 
     function handleClick(news){

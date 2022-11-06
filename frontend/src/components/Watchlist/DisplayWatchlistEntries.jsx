@@ -20,7 +20,6 @@ const DisplayWatchlistDetails = (props) =>{
                         <td>{index + 1}</td>
                         <td>{stock.watchlist}</td>
                         <td>{stock.target_price}</td>
-                     
                     </tr>
                 );
             })}

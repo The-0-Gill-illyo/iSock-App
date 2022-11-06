@@ -8,4 +8,13 @@
     border-style: dotted dashed solid double;
     margin-top: 25px;
     line-height: 2;
+    text-shadow: 2.5px 2.5px rgb(226, 134, 5);
 }
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+

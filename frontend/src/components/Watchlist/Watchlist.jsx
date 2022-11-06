@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import AddStockEntry from './AddStockEntry';
 import DisplayWatchlistDetails from './DisplayWatchlistEntries';
+import DeleteFromWatchlist from './DeleteFromWatchlist';
 
 const Watchlist = () => {
 
@@ -27,7 +28,11 @@ const Watchlist = () => {
 
         function addNewEntry(entry){
   
-            
+        let tempEntries = [...entries, entry];
+        
+        console.log(tempEntries)
+        setEntries(tempEntries);
+
         }
 
         return(
@@ -37,7 +42,8 @@ const Watchlist = () => {
                 </div>
                 <DisplayWatchlistDetails parentEntries={storedToWatchlist}/>
                 <AddStockEntry addStockEntryProperty={addNewEntry}/>
-           </div>
+                <DeleteFromWatchlist deleteFromWatchlistProperty={storedToWatchlist} />
+            </div>
         )
 }
 

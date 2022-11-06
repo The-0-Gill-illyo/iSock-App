@@ -1,5 +1,4 @@
-
-
+import "./DisplayCompanyProfile.css"
 
 export default function DisplayCompanyProfile(props){
 
@@ -10,7 +9,7 @@ export default function DisplayCompanyProfile(props){
     }
     
     return(
-        <div className="quote">
+        <div className="display">
             <h3 onClick={handleClick}>
                 {props.companyProfile.address1}
                 <br></br>

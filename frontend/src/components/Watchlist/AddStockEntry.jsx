@@ -1,17 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import useAuth from "../../hooks/useAuth";
+import axios from 'axios';
 
+import './AddStockEntry.css'
 
 
 const AddStockEntry = (props) => {
 
-    const [stockName, setStockName] = useState("");
+    const [addStock, setAddStock] = useState([]);
+    const [stockName, setStockName] = useState([]);
     const [targetPrice, setTargetPrice] = useState(0);
+    const [user, token] = useAuth();
+
+    useEffect(() =>{
+        fetchAddedStock()
+    }, []);
+
+    const fetchAddedStock = async () => {
+        let response = await axios.post("http://127.0.0.1:8000/api/watchlist/", {
+            headers: {
+                Authorization: "Bearer " + token,
+            },
+        });console.log(addStock)
+        setAddStock(response.data)
+    }
 
 
     function handleSubmit(event){
         event.preventDefault();
         let newStock = {
-            stock_name: stockName,
+            watchlist: stockName,
             target_price: targetPrice,
         };
         console.log(newStock);

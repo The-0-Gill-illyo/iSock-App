@@ -1,3 +1,6 @@
+import "./DisplayStockDetails.css"
+import '../../img/obi-pixel6propix-gHApwF6pjTg-unsplash (1).jpg'
+
 
 export default function DisplayStockSearch(props){
 
@@ -8,9 +11,9 @@ export default function DisplayStockSearch(props){
         console.log(stockId)
     }
     
-    
+    <img src="./img/obi-pixel6propix-gHApwF6pjTg-unsplash (1).jpg" alt="Paris"/>
     return(
-        <div>
+        <div className="display">
         <form onSubmit={handleClick}>
         <h1>
             Ticker Symbol: {props.searchStocks.symbol}
