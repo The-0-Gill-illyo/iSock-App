@@ -17,7 +17,7 @@ const AddStockEntry = (props) => {
     }, []);
 
     const fetchAddedStock = async () => {
-        let response = await axios.post("http://127.0.0.1:8000/api/watchlist/", {
+        let response = await axios.post("http://127.0.0.1:8000/api/watchlist/user_watchlist", {
             headers: {
                 Authorization: "Bearer " + token,
             },

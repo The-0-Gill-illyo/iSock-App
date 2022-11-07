@@ -42,7 +42,8 @@ const Watchlist = () => {
                 </div>
                 <DisplayWatchlistDetails parentEntries={storedToWatchlist}/>
                 <AddStockEntry addStockEntryProperty={addNewEntry}/>
-                <DeleteFromWatchlist deleteFromWatchlistProperty={storedToWatchlist} />
+                <DeleteFromWatchlist deleteFromWatchlistProperty={entries} />
+
             </div>
         )
 }
