@@ -27,7 +27,7 @@ const Navbar = () => {
       <div>
       {showWatchlist ? (
         <div className="dropdown">
-        <button className="dropbtn" onClick={() => setShowWatchList(!showWatchlist)}>Display Options</button>
+        <button className="dropdown" onClick={() => setShowWatchList(!showWatchlist)}>Display Options</button>
           </div>
         ) : (
           <div className="dropdown">
