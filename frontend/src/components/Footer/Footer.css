@@ -1,9 +1,7 @@
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: webkit-sticky;
   width: 100%;
-  color: rgb(89, 78, 51);
+  color: darkred;
   text-align: center;
-  height: 2.5em;
+  height: 25px;
 }
