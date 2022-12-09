@@ -95,3 +95,10 @@ body{
   overflow: auto;
   text-align: center;
 }
+.dropbtn{
+  color:gold;
+ padding: 16px;
+ font-size: 16px;
+ border: none;
+ cursor: pointer;
+}
