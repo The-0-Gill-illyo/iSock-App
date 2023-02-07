@@ -1,6 +1,10 @@
+//Page Imports
+import App from "./App";
+import "./index.css";
+
+//Other Imports
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router } from "react-router-dom";
 
